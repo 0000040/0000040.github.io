@@ -2,8 +2,9 @@
 title: Index
 ---
 
-<input type="radio" id="light" name="theme"> Light</input>
-<input type="radio" id="dark" name="theme"> Dark</input>
+<input type="radio" id="light" name="theme"> Light
+</br>
+<input type="radio" id="dark" name="theme"> Dark
 
 <a href="mailto:0000040@duck.com">Contact</a>
 bsky: [https://bsky.app/profile/0000040.xyz](https://bsky.app/profile/0000040.xyz)
