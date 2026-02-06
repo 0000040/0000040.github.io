@@ -3,14 +3,10 @@ title: Index
 ---
 
 <input type="radio" id="light" name="theme"> Light
-
-</br>
-
 <input type="radio" id="dark" name="theme"> Dark
 
-- <a href="mailto:0000040@duck.com">Contact</a>
 - [https://bsky.app/profile/0000040.xyz](https://bsky.app/profile/0000040.xyz)
-- [0000040@duck.com]](mailto:0000040@duck.com)
+- [0000040@duck.com](mailto:0000040@duck.com)
 
 ## Posts
 
