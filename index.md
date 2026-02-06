@@ -2,7 +2,7 @@
 title: Index
 ---
 
-A blog documenting the journey throught computer related problems.
+A blog documenting the journey through computer related problems.
 
 - [https://bsky.app/profile/0000040.xyz](https://bsky.app/profile/0000040.xyz)
 - [0000040@duck.com](mailto:0000040@duck.com)
