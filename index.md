@@ -2,6 +2,8 @@
 title: Index
 ---
 
+<input type="radio" id="light" name="theme"> Light</input>
+<input type="radio" id="dark" name="theme"> Dark</input>
 
 ## Posts
 
