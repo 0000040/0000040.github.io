@@ -14,14 +14,16 @@
 // =============================================================================
 
 :root {
-  // Color Palette
-  --color-text: #24292f;
-  --color-text-secondary: #6e7781;
-  --color-background: #ffffff;
-  --color-border: #e5e7eb;
-  --color-link: #8b4513;
-  --color-link-hover: #a0522d;
-  --color-focus-ring: #0969da;
+  color-scheme: light dark;
+  
+  // Color Palette with light-dark support
+  --color-text: light-dark(#24292f, #e5e7eb);
+  --color-text-secondary: light-dark(#6e7781, #b1b5bb);
+  --color-background: light-dark(#ffffff, #181a1b);
+  --color-border: light-dark(#e5e7eb, #2c2f34);
+  --color-link: light-dark(#8b4513, #d2691e);
+  --color-link-hover: light-dark(#a0522d, #ff9800);
+  --color-focus-ring: light-dark(#0969da, #42a5f5);
   
   // Typography
   --font-serif: "Source Serif 4", Georgia, serif;
@@ -54,21 +56,13 @@
   // Transitions
   --transition-fast: 0.15s ease;
   --transition-normal: 0.2s ease;
+  
+  // Theme Toggle Support
+  &:has(#light:checked) { color-scheme: light; }
+  &:has(#dark:checked) { color-scheme: dark; }
 }
 
-// =============================================================================
-// DARK THEME COLOR PALETTE
-// =============================================================================
 
-:root[data-theme="dark"] {
-  --color-text: #e5e7eb;
-  --color-text-secondary: #b1b5bb;
-  --color-background: #181a1b;
-  --color-border: #2c2f34;
-  --color-link: #d2691e;
-  --color-link-hover: #ff9800;
-  --color-focus-ring: #42a5f5;
-}
 
 // =============================================================================
 // RESET & BASE STYLES
