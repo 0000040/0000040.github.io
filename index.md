@@ -1,6 +1,5 @@
 ---
 title: Index
-has_map: true
 ---
 
 

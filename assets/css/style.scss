@@ -12,15 +12,6 @@
 // =============================================================================
 // CSS VARIABLES
 // =============================================================================
-:root[data-theme="dark"] {
-  --color-text: #e5e7eb;
-  --color-text-secondary: #b1b5bb;
-  --color-background: #181a1b;
-  --color-border: #2c2f34;
-  --color-link: #d2691e;
-  --color-link-hover: #ff9800;
-  --color-focus-ring: #42a5f5;
-}
 
 :root {
   // Color Palette
@@ -65,6 +56,19 @@
   --transition-normal: 0.2s ease;
 }
 
+// =============================================================================
+// DARK THEME COLOR PALETTE
+// =============================================================================
+
+:root[data-theme="dark"] {
+  --color-text: #e5e7eb;
+  --color-text-secondary: #b1b5bb;
+  --color-background: #181a1b;
+  --color-border: #2c2f34;
+  --color-link: #d2691e;
+  --color-link-hover: #ff9800;
+  --color-focus-ring: #42a5f5;
+
 
 // =============================================================================
 // RESET & BASE STYLES
@@ -84,6 +88,7 @@ body {
   font-family: var(--font-serif);
   background-color: var(--color-background);
   color: var(--color-text);
+  transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
 .markdown-body {
