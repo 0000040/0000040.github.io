@@ -3,7 +3,9 @@ title: Index
 ---
 
 <input type="radio" id="light" name="theme"> Light
+
 </br>
+
 <input type="radio" id="dark" name="theme"> Dark
 
 - <a href="mailto:0000040@duck.com">Contact</a>
