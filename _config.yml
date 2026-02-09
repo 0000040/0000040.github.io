@@ -1,7 +1,30 @@
 url: "https://0000040.xyz"
-
 production_url: "https://0000040.xyz"   
 
 title: "0000040"
-description: A blog documenting the journey through computer related problems.
+description: "A blog documenting the journey through computer related problems."
+author: "0000040"
+email: "0000040@duck.com"
+twitter: https://bsky.app/profile/0000040.xyz
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO
+permalink: /:year/:month/:day/:title/
+paginate: 10
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+excerpt_separator: "\n\n"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:year/:month/:day/:title/
 

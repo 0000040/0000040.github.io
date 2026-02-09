@@ -1,6 +1,10 @@
 ---
 title: "Website Launch"
 date: 2026-01-01
+categories: [meta, announcement]
+tags: [website, blog, launch]
+excerpt: "Announcing the launch of my personal website and blog dedicated to sharing computer science, technology, and problem-solving solutions."
+description: "Learn about the launch of this personal blog and why I chose to create my own website instead of relying on social media platforms."
 ---
 
 <h1>{{ page.title }}</h1>
@@ -14,4 +18,4 @@ On this website, you can find my professional achievements, various information 
   <p>© {{ 'now' | date: '%Y' }} 0000040.xyz</p>
   <p>This page is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nd/4.0/">Creative
 Commons Attribution-NoDerivatives 4.0 International License</a></p>
-</footer>>
+</footer>

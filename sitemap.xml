@@ -1,10 +1,22 @@
 ---
-layout: nil
-title : "Sitemap"
+layout: null
+title: "Sitemap"
 sitemap_exclude: y
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+
+  <!-- Homepage -->
+  <url>
+    <loc>{{ site.production_url }}/</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- All Posts -->
   {% for post in site.posts %}
   <url>
     <loc>{{ site.production_url }}{{ post.url | remove: 'index.html' }}</loc>
@@ -18,14 +30,16 @@ sitemap_exclude: y
   </url>
   {% endfor %}
 
+  <!-- Static Pages -->
   {% for page in site.pages %}
   {% if page.sitemap_exclude != "y" and page.url contains ".html" %}
   <url>
     <loc>{{ site.production_url }}{{ page.url | remove: 'index.html' }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   {% endif %}
   {% endfor %}
+
 </urlset>
