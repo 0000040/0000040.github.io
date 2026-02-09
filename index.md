@@ -52,9 +52,8 @@ A blog documenting the journey through computer-related problems, solutions, and
 ## Subscribe to Updates
 
 Stay updated with new articles:
-- [📡 RSS Feed](/feed.xml)
-- [⛓️ Atom Feed](/atom.xml)
-- [📰 Google News Feed](/feed-news.xml)
+- [RSS Feed](/feed.xml)
+- [Atom Feed](/atom.xml)
 
 <footer>
   <p>© {{ 'now' | date: '%Y' }} 0000040.xyz</p>
