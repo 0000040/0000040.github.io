@@ -3,39 +3,33 @@ layout: null
 sitemap_exclude: y
 ---
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
     <loc>{{ site.production_url | default: site.url }}/</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
 
   {% for post in site.posts %}
   <url>
-    <loc>{{ site.production_url | default: site.url }}{{ post.url | remove: 'index.html' }}</loc>
-    {% if post.last_modified_at %}
-    <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
-    {% else %}
-    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-    {% endif %}
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>{{ site.production_url | default: site.url }}{{ post.url }}</loc>
+    <lastmod>{% if post.last_modified_at %}{{ post.last_modified_at | date_to_xmlschema }}{% else %}{{ post.date | date_to_xmlschema }}{% endif %}</lastmod>
+    <priority>0.80</priority>
   </url>
   {% endfor %}
 
   {% for page in site.pages %}
-  {% if page.sitemap_exclude != "y" and page.url contains ".html" %}
+    {% assign page_url = page.url %}
+    
+    {% comment %} Фільтри: ігноруємо CSS, XML, JSON, robots.txt та саму sitemap {% endcomment %}
+    {% unless page_url contains ".css" or page_url contains ".xml" or page_url contains ".json" or page_url contains "robots.txt" or page_url == "/index.html" or page_url == "/" or page.sitemap_exclude == "y" %}
   <url>
-    <loc>{{ site.production_url | default: site.url }}{{ page.url | remove: 'index.html' }}</loc>
+    <loc>{{ site.production_url | default: site.url }}{{ page_url | remove: 'index.html' }}</loc>
     <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.80</priority>
   </url>
-  {% endif %}
+    {% endunless %}
   {% endfor %}
 
 </urlset>
